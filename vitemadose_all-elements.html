@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./vitemadose.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2>choisir mon département de vaccination</h2>
+      <card class="card">
+        <div class="card__content">
+          <span class="card__status">créneau disponible!</span>
+          <p class="card__date">Dimanche 4 avril <br> 08h30</p>
+          <span class="card__book-rdv">
+            <p class="card__location">
+              Centre de vaccination de Pontarlier - Salle des Capucins
+            </p>
+            <a href="http://www.doctolib.fr" class="card__btn-rdv">prendre rendez-vous</a>
+            <p class="card__booking-engine">avec Doctolib.fr</p>
+          </span>
+        </div>
+      </card>
+
+
+      <select class="dpt-select">
+          <option>choisir mon département</option>
+          <option>01 Ain</option>
+          <option>38 Isère</option>
+          <option>73 Savoie</option>
+      </select>
+
+    <div>
+      <h3 class="dpt-selected">Résultats pour le département 07</h3>
+      <p class="last-update-info" role="doc-subtitle">dernière vérification : <span>Aujourd'hui, 16h34.</span></p>
+    </siv>
+
+    <section class="results">
+      <card class="minicard">
+        <span class="minicard__informations">
+            <div class="minicard__info minicard__date">Dimanche 4 avril 08h30</div>
+            <div class="minicard__info minicard__location">Centre de vaccination de Pontarlier - Salle des Capucins</div>
+        </span>
+        <div class="minicard__booking-area">
+            <a href="http://www.doctolib.fr" class="minicard__btn active-btn">prendre rendez-vous</a>
+            <p class="minicard__booking-engine">avec Doctolib.fr</p>
+        </div>
+    </card>
+    <card class="minicard">
+        <span class="minicard__informations">
+            <div class="minicard__info minicard__date">Dimanche 4 avril 08h30</div>
+            <div class="minicard__info minicard__location">Centre de vaccination de Pontarlier - Salle des Capucins</div>
+        </span>
+        <div class="minicard__booking-area">
+            <a href="http://www.doctolib.fr" class="minicard__btn active-btn">prendre rendez-vous</a>
+            <p class="minicard__booking-engine">avec Doctolib.fr</p>
+        </div>
+    </card>
+    <card class="minicard">
+        <span class="minicard__informations">
+            <div class="minicard__info minicard__date">Dimanche 4 avril 08h30</div>
+            <div class="minicard__info minicard__location">Centre de vaccination de Pontarlier - Salle des Capucins</div>
+        </span>
+        <div class="minicard__booking-area">
+            <a href="http://www.doctolib.fr" class="minicard__btn active-btn">prendre rendez-vous</a>
+            <p class="minicard__booking-engine">avec Doctolib.fr</p>
+        </div>
+    </card>
+  
+
+<h2>Autres centres de vaccination sans créneau</h2>
+    <card class="minicard inactive-center">
+        <span class="minicard__informations">
+            <div class="minicard__info minicard__date">aucun rdv détecté</div>
+            <div class="minicard__info minicard__location">Centre de vaccination de Pontarlier - Salle des Capucins</div>
+        </span>
+        <span class="minicard__booking-area">
+            <a href="http://www.doctolib.fr" class="minicard__btn inactive-btn">vérifier ce centre</a>
+            <p class="minicard__booking-engine inactive-color">avec Doctolib.fr</p>
+        </span>
+    </card>
+    </div>
+</section>
+  </body>
+</html>

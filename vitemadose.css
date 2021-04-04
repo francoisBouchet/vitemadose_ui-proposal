@@ -1,0 +1,291 @@
+
+
+body { 
+    background-color: #F2F2F2; 
+    box-sizing: border-box; 
+    display:block;
+    font-family: Roboto; 
+    font-style: normal; 
+    
+    margin: 0px; 
+    padding: 0px; 
+    padding-top:0px; 
+}
+
+.wrapper { 
+    background-color: #F2F2F2; 
+    display:block; 
+    height:100%;
+    padding-bottom:4rem;
+    width:100%;
+}
+
+
+.card {
+    display:block;
+    background-color: white; 
+    border: 1px solid rgba(224, 224, 224, 1); 
+    border-radius: 0.6rem;
+    margin: 1rem;
+    padding:0.8rem; 
+    width:294px;
+}
+
+.card__content {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card__book-rdv {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F2F2F2; 
+    border-radius: 0.6rem;
+    padding:1rem;
+    text-align: center;
+}
+
+
+.card__btn-rdv {
+    display:block;
+    background: #2F80ED;
+    border-radius: 5px;
+    box-shadow: 0px 5px 0px #14488E;
+    color:white;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.8rem 0.6rem 0.8rem;
+    width: 75%;
+    transition-duration: 270ms;
+}
+
+.card__btn-rdv:hover {
+    background: #1c6ad1;
+    
+}
+
+.card__btn-rdv:active {
+    box-shadow: 0px 2px 0px #14488E;
+}
+
+.card__date {
+    color: #1D58A8;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 128.69%;
+    text-align: center;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.07);
+}
+
+.card__booking-engine {
+    font-size: 0.7rem;
+    display:block;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.card__status { 
+    background: #d0ffe4; 
+    color: #27AE60; 
+    border-radius: 15px; 
+    font-size: 0.7rem; 
+    font-weight: 600;
+    padding:0.5rem 0.8rem 0.5rem;
+}
+
+/* === SELECT FORM === */
+
+.dpt-select {
+    background: #FFFFFF;
+    border: 3px solid #629CEA;
+    border-radius: 6px;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 3px rgba(173, 173, 173, 0.25);
+
+    font-size:1.3rem;
+    font-weight: 500;
+    color: #44516B;
+    padding: 1rem 0.5rem 1rem;
+    width:299px;
+    display: block;
+    margin: 1.6rem auto 2.1rem auto;
+
+    background: url(./arrow-down-circle.svg) no-repeat right #FFFFFF;
+    -webkit-appearance: none;
+    background-position-x: 256px;
+}
+
+.dpt-select:hover, .dpt-select option {
+    cursor:pointer;
+}
+
+.dpt-selected {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    /* line-height: 128.69%; */
+    margin-bottom: 1rem;
+    color: #44516B;
+    text-align: center;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.07);
+}
+
+.last-update-info {
+    color: #828282;
+    display: block;
+    text-align: center;
+}
+.last-update-info span { color:black; }
+
+/* -- SECTION: RESULTS -- */
+.results {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+/* ==== mini-card ==== */
+
+.minicard {
+    display:block;
+    background-color: white; 
+    border: 1px solid rgba(224, 224, 224, 1);
+    padding: 1rem; 
+    width:290px;
+    border-radius: 6px;
+    margin:1rem;
+    box-shadow: 0px 1px 1px rgba(44, 44, 44, 0.17);
+    transition-duration: 280ms;
+}
+
+.minicard:hover {
+        cursor:pointer;
+        box-shadow: 0px 6px 5px rgba(201, 205, 211, 0.719);
+}
+
+.minicard__info {
+    margin: 0.5rem 0px 0.5rem 0px;
+    text-align: center;
+}
+
+.minicard__date {
+    font-weight:800;
+    color: #113669;
+    font-size: 1.18rem;
+}
+
+.minicard__booking-area {
+    display:grid;
+    place-content: center;
+    margin-top:1rem;
+}
+
+.minicard__btn {
+    display:inline-block;
+    background: #2F80ED;
+    border-radius: 5px;
+    /* box-shadow: 0px 4px 0px #024aa8; */
+    color:white;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin:0.4rem;
+    padding: 0.6rem 0.8rem 0.6rem;
+    transition-duration: 270ms;
+    width:auto;
+}
+
+.minicard__btn:hover {
+    background: #1c6ad1;;
+}
+
+.minicard__btn:active {
+    box-shadow: 0px 2px 0px #14488E;
+}
+
+.minicard__booking-engine {
+    font-size: 0.7rem;
+    margin:0px;
+    color:#328bff;
+    text-align: center;
+}
+
+.minicard__booking-engine:hover {
+    color: #14488E;
+}
+
+
+
+@media only screen and (min-width: 768px)
+{
+
+    .minicard {
+        min-width: 760px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 1px 1px rgba(44, 44, 44, 0.17);
+    }
+
+    .minicard__informations {
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .minicard__info {
+        justify-self: left;
+    }
+
+    .minicard__booking-area {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .active-btn {
+        display:block;
+        background: #2F80ED;
+        border-radius: 5px;
+        box-shadow: 0px 5px 0px #14488E;
+        color:white;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 0.8rem 2rem 0.8rem;
+        transition-duration: 270ms;
+        margin-bottom:1rem;
+    }
+
+}
+
+
+/* centres sans résa possible détectée */
+
+.inactive-center {
+    background: #dddddd;
+    border:1px solid rgba(0, 0, 0, 0);
+    box-shadow: none;
+    transition-duration: 250ms;
+}
+
+.inactive-btn {
+    background-color: #5F6D88;
+    min-width: 220px;
+}
+
+.inactive-btn:hover {
+    background-color: #44516B;
+}
+
+.inactive-color{
+    color: #5F6D88;
+}

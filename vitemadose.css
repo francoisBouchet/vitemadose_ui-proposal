@@ -1,5 +1,11 @@
 
+/*  
+PROPOSITION OF UI FOR "vite ma dose !"
+Figma moodboard file is available at the following url:
+https://www.figma.com/file/Nn3e9QM2CSNEwrY4pUgtMY/Vite-ma-dose?node-id=0%3A1
+default font used: Roboto
 
+*/
 body { 
     background-color: #F2F2F2; 
     box-sizing: border-box; 
@@ -15,15 +21,25 @@ body {
 .wrapper { 
     background-color: #F2F2F2; 
     display:block; 
-    height:100%;
     padding-bottom:4rem;
+
+    height:100%;
     width:100%;
 }
 
+/* ---- PAGE ELEMENTS BEGIN HERE ---- */
+
+h2, h3, h4, h5, h6 {
+    color: #44516B;;
+}
+
+h3 {
+    margin-top: 3rem;
+    font-size:larger;
+}
 
 
-
-/* === SELECT FORM === */
+/* ---- SELECT FORM ---- */
 
 .dpt-select {
     background: #FFFFFF;
@@ -31,15 +47,15 @@ body {
     border-radius: 6px;
     box-sizing: border-box;
     box-shadow: 0px 5px 3px rgba(173, 173, 173, 0.25);
-
+    display: block;
+    color: #44516B;
     font-size:1.3rem;
     font-weight: 500;
-    color: #44516B;
+    margin: 1.6rem auto 2.1rem auto;
     padding: 1rem 0.5rem 1rem;
     width:299px;
-    display: block;
-    margin: 1.6rem auto 2.1rem auto;
 
+    /* select arrow-down customization */
     background: url(./arrow-down-circle.svg) no-repeat right #FFFFFF;
     -webkit-appearance: none;
     background-position-x: 256px;
@@ -49,141 +65,143 @@ body {
     cursor:pointer;
 }
 
+/* ---- SELECTED DPT TITLE & INFO ---- */
+
 .dpt-selected {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 30px;
-    /* line-height: 128.69%; */
-    margin-bottom: 1rem;
     color: #44516B;
+    font-size: 1.875rem;
+    margin-bottom: 1rem;
     text-align: center;
-    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.07);
 }
 
 .last-update-info {
-    color: #828282;
+    color: #636363;
     display: block;
     text-align: center;
 }
-.last-update-info span { color:black; }
 
-/* -- SECTION: RESULTS -- */
+.last-update-info span { 
+    color:#44516B; 
+    font-weight: 600; 
+}
+
+
+/* ---- SECTION: RESULTS (GOOD or BAD) ---- */
+
 .results {
-    width:100%;
     display:flex;
     flex-direction:column;
     align-items: center;
 }
 
-/* ==== mini-card ==== */
 
-.linking-container {
-    text-decoration: none;
-}
+/* ---- VACCINATION CARD ---- 
+*  Those properties are applying in priority on the small-width screens.
+*  There is a media query later on for screens wider than 767px
+*/
 
+.linking-container /* link is all over the card, prevent the underline on all text inside the card */
+{ text-decoration: none;}
 
-.minicard {
-    display:block;
+.card {
     background-color: white; 
     border: 1px solid rgba(224, 224, 224, 1);
-    padding: 1rem; 
-    width:290px;
     border-radius: 6px;
-    margin:1rem;
     box-shadow: 0px 1px 1px rgba(44, 44, 44, 0.17);
+    display:block;
+    margin:1rem;
+    padding: 1rem;
+    width:290px;
+    text-decoration: none;
     transition-duration: 280ms;
 }
 
-.minicard:hover {
-        cursor:pointer;
-        box-shadow: 0px 6px 5px rgba(201, 205, 211, 0.719);
+.card:hover {
+    box-shadow: 0px 6px 5px rgba(201, 205, 211, 0.719);
+    cursor:pointer;
 }
 
-.minicard__info {
+.card__info {
     margin: 0.5rem 0px 0.5rem 0px;
     text-align: center;
 }
 
-.minicard__date {
-    font-weight:800;
+.card__date {
+    font-weight:700;
     color: #113669;
     font-size: 1.18rem;
 }
 
-.minicard__location {
-    color:black;
+.card__location {
+    color:rgb(39, 39, 39);
 }
 
-.minicard__booking-area {
+.card__booking-area {
     display:grid;
     place-content: center;
     margin-top:1rem;
 }
 
-.minicard__btn {
-    display:inline-block;
+.card__btn {
     background: #2F80ED;
     border:none;
     border-radius: 5px;
-    /* box-shadow: 0px 4px 0px #024aa8; */
+    outline:none;
+
     color:white;
     font-size: 1rem;
     text-align: center;
     text-transform: uppercase;
-    text-decoration: none;
+
     margin:0.4rem;
-    outline:none;
     padding: 0.6rem 0.8rem 0.6rem;
-    transition-duration: 270ms;
     width:auto;
+
+    transition-duration: 270ms;
 }
 
-.minicard__btn:hover {
-    background: #1c6ad1;;
+.card__btn:hover {
+    background: #1c6ad1;
     cursor:pointer;
 }
 
-.minicard__btn:active {
-    box-shadow: 0px 2px 0px #14488E;
-}
-
-.minicard__booking-engine {
-    font-size: 0.7rem;
-    margin:0px;
+.card__booking-engine {
     color:#328bff;
+    font-size: 0.88rem;
+    margin:0px;
     text-align: center;
 }
 
-.minicard__booking-engine:hover {
+.card__booking-engine:hover {
     color: #14488E;
 }
 
 
 
-@media only screen and (min-width: 768px)
+@media only screen and (min-width: 767px)
 {
 
-    .minicard {
-        min-width: 760px;
+    .card {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+
+        min-width: 760px;
         box-shadow: 0px 1px 1px rgba(44, 44, 44, 0.17);
     }
 
-    .minicard__informations {
+    .card__info-area {
         display:flex;
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .minicard__info {
-        justify-self: left;
+    .card__info {
+        text-align: left;
     }
 
-    .minicard__booking-area {
+    .card__booking-area {
         display:flex;
         flex-direction: column;
     }
@@ -193,30 +211,43 @@ body {
         background: #2F80ED;
         border-radius: 5px;
         box-shadow: 0px 5px 0px #14488E;
+
         color:white;
         text-align: center;
         text-transform: uppercase;
         text-decoration: none;
+
         padding: 0.8rem 2rem 0.8rem;
-        transition-duration: 270ms;
         margin-bottom:1rem;
+
+        transition-duration: 270ms;
+    }
+
+    .card__btn:active {
+        box-shadow: 0px 2px 0px #14488E;
     }
 
 }
 
 
-/* centres sans résa possible détectée */
+/*---- VACCINATION CENTERS WITH NO KNOWN AVAILABILITIES ----*/
 
 .inactive-center {
     background: #dddddd;
     border:1px solid rgba(0, 0, 0, 0);
     box-shadow: none;
+
     transition-duration: 250ms;
 }
 
 .inactive-btn {
     background-color: #5F6D88;
+
+    margin-bottom:1rem;
     min-width: 220px;
+    padding: 0.8rem 2rem 0.8rem;
+
+    transition-duration: 270ms;
 }
 
 .inactive-btn:hover {
@@ -225,4 +256,8 @@ body {
 
 .inactive-color{
     color: #5F6D88;
+}
+
+.inactive-color:hover {
+    color: #44516B;
 }

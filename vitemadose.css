@@ -21,83 +21,7 @@ body {
 }
 
 
-.card {
-    display:block;
-    background-color: white; 
-    border: 1px solid rgba(224, 224, 224, 1); 
-    border-radius: 0.6rem;
-    margin: 1rem;
-    padding:0.8rem; 
-    width:294px;
-}
 
-.card__content {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.card__book-rdv {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #F2F2F2; 
-    border-radius: 0.6rem;
-    padding:1rem;
-    text-align: center;
-}
-
-
-.card__btn-rdv {
-    display:block;
-    background: #2F80ED;
-    border-radius: 5px;
-    box-shadow: 0px 5px 0px #14488E;
-    color:white;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 0.8rem 0.6rem 0.8rem;
-    width: 75%;
-    transition-duration: 270ms;
-}
-
-.card__btn-rdv:hover {
-    background: #1c6ad1;
-    
-}
-
-.card__btn-rdv:active {
-    box-shadow: 0px 2px 0px #14488E;
-}
-
-.card__date {
-    color: #1D58A8;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 30px;
-    line-height: 128.69%;
-    text-align: center;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.07);
-}
-
-.card__booking-engine {
-    font-size: 0.7rem;
-    display:block;
-    text-align: center;
-    margin-top: 1rem;
-}
-
-.card__status { 
-    background: #d0ffe4; 
-    color: #27AE60; 
-    border-radius: 15px; 
-    font-size: 0.7rem; 
-    font-weight: 600;
-    padding:0.5rem 0.8rem 0.5rem;
-}
 
 /* === SELECT FORM === */
 
@@ -154,6 +78,11 @@ body {
 
 /* ==== mini-card ==== */
 
+.linking-container {
+    text-decoration: none;
+}
+
+
 .minicard {
     display:block;
     background-color: white; 
@@ -182,6 +111,10 @@ body {
     font-size: 1.18rem;
 }
 
+.minicard__location {
+    color:black;
+}
+
 .minicard__booking-area {
     display:grid;
     place-content: center;
@@ -191,13 +124,16 @@ body {
 .minicard__btn {
     display:inline-block;
     background: #2F80ED;
+    border:none;
     border-radius: 5px;
     /* box-shadow: 0px 4px 0px #024aa8; */
     color:white;
+    font-size: 1rem;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
     margin:0.4rem;
+    outline:none;
     padding: 0.6rem 0.8rem 0.6rem;
     transition-duration: 270ms;
     width:auto;
@@ -205,6 +141,7 @@ body {
 
 .minicard__btn:hover {
     background: #1c6ad1;;
+    cursor:pointer;
 }
 
 .minicard__btn:active {
